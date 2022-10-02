@@ -1,0 +1,39 @@
+[33mcommit 027fbde57356ebac6c85f66b903499d675f0ae6e[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m)[m
+Merge: dd4bf12 ad2608f
+Author: trquoctoann <quoctoan09072002@gmail.com>
+Date:   Wed Sep 14 14:44:55 2022 +0700
+
+    Merge branch 'master' of https://github.com/trquoctoann/data_mining_college_project
+
+[33mcommit dd4bf1257c33571fc34eaac1a8424e6a2a3aed84[m
+Author: trquoctoann <quoctoan09072002@gmail.com>
+Date:   Wed Sep 14 14:44:05 2022 +0700
+
+    Preprocessing
+
+[33mcommit ad2608fe245b0de5199d07c18121fb6d59144ed6[m
+Merge: 12ab3de b378f48
+Author: trquoctoann <112103752+trquoctoann@users.noreply.github.com>
+Date:   Wed Sep 14 14:39:21 2022 +0700
+
+    Merge pull request #1 from trquoctoann/preprocessing
+    
+    Preprocessing
+
+[33mcommit b378f486e5401f573b23f9524f78c9ad24ffe4e9[m[33m ([m[1;31morigin/preprocessing[m[33m, [m[1;32mpreprocessing[m[33m)[m
+Author: trquoctoann <quoctoan09072002@gmail.com>
+Date:   Wed Sep 14 14:35:57 2022 +0700
+
+    .
+
+[33mcommit 82142416e71f450355eb200db3ad31832a1d57cd[m
+Author: trquoctoann <quoctoan09072002@gmail.com>
+Date:   Wed Sep 14 14:28:54 2022 +0700
+
+    Preprocessing Data
+
+[33mcommit 12ab3de2804a0d4adb5c3cf9c9296e7eb81ac618[m[33m ([m[1;31morigin/dinhtai[m[33m)[m
+Author: trquoctoann <quoctoan09072002@gmail.com>
+Date:   Tue Sep 13 11:01:24 2022 +0700
+
+    Add Data
