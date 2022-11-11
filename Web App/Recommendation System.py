@@ -6,14 +6,14 @@ import flask
 import datetime as dt
 
 # read data, just change the path to the place where you store this repo
-path = 'D:\Giáo Trình\Kỳ 5\Kho và Khai Phá Dữ Liệu\Project'
-customerListId = pd.read_csv(os.path.join(path, 'Web App\\Data\\customer_id.csv'))
-productListId = pd.read_csv(os.path.join(path, 'Web App\\Data\\product_id.csv'))
-prodRules = pd.read_csv(os.path.join(path, 'Web App\\Data\\prod_rules.csv'))
-customerSegment = pd.read_csv(os.path.join(path, 'Web App\\Data\\rfm.csv'))
-recommendData = pd.read_csv(os.path.join(path, 'Web App\\Data\\recommendData.csv'))
-rawRating = Path(os.path.join(path, 'Web App\\Data\\spare_matrix.txt')).read_text()
-rawSimilarity = Path(os.path.join(path, 'Web App\\Data\\similarity.txt')).read_text()
+this_dir, this_filename = os.path.split(__file__)
+customerListId = pd.read_csv(os.path.join(this_dir, 'Data//customer_id.csv'))
+productListId = pd.read_csv(os.path.join(this_dir, 'Data//product_id.csv'))
+prodRules = pd.read_csv(os.path.join(this_dir, 'Data//prod_rules.csv'))
+customerSegment = pd.read_csv(os.path.join(this_dir, 'Data//rfm.csv'))
+recommendData = pd.read_csv(os.path.join(this_dir, 'Data//recommendData.csv'))
+rawRating = Path(os.path.join(this_dir, 'Data//spare_matrix.txt')).read_text()
+rawSimilarity = Path(os.path.join(this_dir, 'Data//similarity.txt')).read_text()
 
 class system(object) : 
     def __init__(self, cusId, rawRating = rawRating, rawSimilarity = rawSimilarity, 
@@ -177,7 +177,7 @@ def lowPriceProduct(category, recommendData = recommendData, curMonth = dt.datet
                 by = ['price', 'review_score'], ascending = [True, False])
     return recommend[['product_id', 'price']][:10].values.tolist()
 
-app = flask.Flask(__name__, template_folder = os.path.join(path, 'Web App\\Template'))
+app = flask.Flask(__name__, template_folder = os.path.join(this_dir, 'Template'))
 @app.route('/', methods = ['GET', 'POST'])
 def main():
     if flask.request.method == 'GET':
@@ -242,4 +242,4 @@ def main():
                                         , product_idRS = productRecommend, priceRS = priceRS, cluster_name = cusSegment)
 
 if __name__ == '__main__':
-    app.run()
+    app.run(host="0.0.0.0")
