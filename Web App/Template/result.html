@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="result.css" />
+    <title>Document</title>
+  </head>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+    * {
+      font-family: "Poppins", sans-serif;
+      padding: 0;
+      margin: 0;
+    }
+    body {
+      height: 100vh;
+      min-height: 100vh;
+      background-color: #f1fdff;
+      display: flex;
+      justify-content: center;
+      padding-bottom: 5rem;
+    }
+    .container {
+      margin-top: 8rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .title {
+      text-align: center;
+      text-decoration: underline;
+    }
+
+    .sub-title {
+      margin-top: 0.8rem;
+      text-align: center;
+      font-size: 1.5rem;
+    }
+
+    .result {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+      margin-top: 2rem;
+      max-width: 50%;
+    }
+
+    .table-name {
+      text-align: center;
+      padding: 0.6rem 0;
+    }
+    .table-container > .table-name {
+      border: solid 1px black;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      table-layout: fixed;
+    }
+    th,
+    td {
+      border: 1px solid;
+    }
+    th,
+    td {
+      padding: 1rem 1rem;
+      text-align: center;
+    }
+
+    td {
+      overflow-y: auto;
+    }
+
+    td::-webkit-scrollbar {
+      display: none;
+    }
+  </style>
+
+  <body>
+    <div class="container">
+      <h1 class="title">Products Recommendation</h1>
+      <p class="sub-title">Showing Results For : {{search_name}}</p>
+      <p class="sub-title">Customer Segment : {{cluster_name}}</p>
+      <div class="result">
+        <div class="table-container">
+          <h3 class="table-name">Should buy</h3>
+          <table>
+            <tr>
+              <th>Product id</th>
+              <th>Price</th>
+            </tr>
+            <tbody class="table_body">
+              <tr>
+                <td>{{product_idAR[0]}}</td>
+                <td>{{priceAR[0]}}</td>
+              </tr>
+              <tr>
+                <td>{{product_idAR[1]}}</td>
+                <td>{{priceAR[1]}}</td>
+              </tr>
+              <tr>
+                <td>{{product_idAR[2]}}</td>
+                <td>{{priceAR[2]}}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="table-container">
+          <h3 class="table-name">People Also Like</h3>
+          <table>
+            <tr>
+              <th>Product id</th>
+              <th>Price</th>
+            </tr>
+            <tbody class="table_body">
+              <tr>
+                <td>{{product_idRS[0]}}</td>
+                <td>{{priceRS[0]}}</td>
+              </tr>
+              <tr>
+                <td>{{product_idRS[1]}}</td>
+                <td>{{priceRS[1]}}</td>
+              </tr>
+              <tr>
+                <td>{{product_idRS[2]}}</td>
+                <td>{{priceRS[2]}}</td>
+              </tr>
+              <tr>
+                <td>{{product_idRS[3]}}</td>
+                <td>{{priceRS[3]}}</td>
+              </tr>
+              <tr>
+                <td>{{product_idRS[4]}}</td>
+                <td>{{priceRS[4]}}</td>
+              </tr>
+              <tr>
+                <td>{{product_idRS[5]}}</td>
+                <td>{{priceRS[5]}}</td>
+              </tr>
+              <tr>
+                <td>{{product_idRS[6]}}</td>
+                <td>{{priceRS[6]}}</td>
+              </tr>
+              <tr>
+                <td>{{product_idRS[7]}}</td>
+                <td>{{priceRS[7]}}</td>
+              </tr>
+              <tr>
+                <td>{{product_idRS[8]}}</td>
+                <td>{{priceRS[8]}}</td>
+              </tr>
+              <tr>
+                <td>{{product_idRS[9]}}</td>
+                <td>{{priceRS[9]}}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
