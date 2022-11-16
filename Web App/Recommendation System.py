@@ -213,7 +213,7 @@ def main():
             productRecommend = []
             priceRS = []
             # get popular product and cross sell for Potential 
-            if cusSegment == 'Potential' : 
+            if cusSegment == 'Promising' or cusSegment == 'Need Attention' : 
                 productRecommend += recommendFromSystem
                 priceRS += priceFromSystem
                 for i in popularProduct(category)[: 10 - len(recommendFromSystem)] : 
